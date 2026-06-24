@@ -347,3 +347,111 @@ body {
   font-size: 18px;
   font-weight: 600;
 }
+
+/* ─── TARGET ─── */
+#target {
+  padding: var(--section-pad);
+  background: var(--bg-secondary);
+}
+
+.target-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.target-list {
+  list-style: none;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.target-list li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.chk {
+  color: var(--gold);
+  font-size: 20px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.target-no {
+  padding: 40px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.target-no h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 8px 0 24px;
+}
+
+.no-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.no-list li {
+  padding-left: 22px;
+  position: relative;
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.no-list li::before {
+  content: '×';
+  position: absolute;
+  left: 0;
+  color: #ef4444;
+  font-weight: 700;
+}
+
+/* ─── TESTIMONIALS ─── */
+#testimonials { padding: var(--section-pad); }
+
+.review-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 32px;
+}
+
+.stars {
+  color: var(--gold);
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.review-card p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.reviewer {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
