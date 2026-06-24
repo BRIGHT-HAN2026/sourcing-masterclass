@@ -11,6 +11,7 @@
   --radius: 12px;
   --max-width: 1100px;
   --section-pad: 100px 24px;
+  --faq-hover: #1e2530;
 }
 
 html { scroll-behavior: smooth; }
@@ -590,7 +591,7 @@ body {
   transition: background 0.2s;
 }
 
-.faq-q:hover { background: #1e2530; }
+.faq-q:hover { background: var(--faq-hover); }
 
 .faq-icon {
   font-size: 28px;
@@ -659,4 +660,39 @@ body {
   font-size: 12px;
   color: var(--text-secondary);
   opacity: 0.4;
+}
+
+/* ─── RESPONSIVE (768px 이하) ─── */
+@media (max-width: 768px) {
+  :root { --section-pad: 72px 20px; }
+
+  .pain-cards,
+  .why-cards,
+  .review-cards { grid-template-columns: 1fr; }
+
+  .instructor-inner { grid-template-columns: 1fr; gap: 40px; }
+  .instructor-placeholder { aspect-ratio: 4/3; }
+
+  .target-wrap { grid-template-columns: 1fr; gap: 40px; }
+
+  .price-top,
+  .price-includes,
+  .price-actions { padding: 32px 28px; }
+
+  .price-amount { font-size: 36px; }
+
+  .faq-q { font-size: 15px; padding: 20px 24px; }
+  .faq-a { padding: 16px 24px 24px; }
+
+  .curriculum-item { padding: 20px 24px; gap: 16px; }
+  .curr-num { font-size: 24px; min-width: 36px; }
+
+  .footer-info span {
+    border-right: none;
+    padding: 2px 0;
+  }
+
+  .hero-title { font-size: clamp(28px, 7vw, 42px); }
+  .hero-sub { font-size: 17px; }
+  .btn-primary { padding: 16px 28px; font-size: 16px; }
 }
