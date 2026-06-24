@@ -663,6 +663,210 @@ body {
   opacity: 0.4;
 }
 
+/* ─── LOGISTICS / 3PL SECTION ─── */
+#logistics {
+  padding: var(--section-pad);
+  background: var(--bg-secondary);
+}
+
+.logistics-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* 창고 비주얼 */
+.logi-warehouse {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logi-warehouse-img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 4/3;
+  position: relative;
+}
+
+.logi-wh-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #0f1923 0%, #1a2535 60%, #0f1923 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 창고 선반 애니메이션 */
+.logi-wh-rack {
+  height: 6px;
+  background: linear-gradient(90deg, #2a3a50, #3a4f6a, #2a3a50);
+  border-radius: 2px;
+  position: absolute;
+  width: 85%;
+  left: 7%;
+  opacity: 0.6;
+}
+.logi-wh-rack:nth-child(1) { top: 22%; }
+.logi-wh-rack-2 { top: 44%; }
+.logi-wh-rack-3 { top: 66%; }
+
+.logi-wh-boxes {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  left: 10%;
+  top: 16%;
+  animation: wh-scroll 8s linear infinite;
+}
+
+.logi-wh-boxes span {
+  display: block;
+  width: 32px;
+  height: 28px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.logi-wh-boxes span:nth-child(1) { background: #c9a84c; opacity: 0.7; }
+.logi-wh-boxes span:nth-child(2) { background: #4a7fe8; opacity: 0.5; margin-top: 6px; }
+.logi-wh-boxes span:nth-child(3) { background: #c9a84c; opacity: 0.4; }
+.logi-wh-boxes span:nth-child(4) { background: #4a7fe8; opacity: 0.6; margin-top: 3px; }
+.logi-wh-boxes span:nth-child(5) { background: #c9a84c; opacity: 0.5; margin-top: 8px; }
+.logi-wh-boxes span:nth-child(6) { background: #4a7fe8; opacity: 0.4; }
+
+@keyframes wh-scroll {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(40px); }
+  100% { transform: translateX(0); }
+}
+
+.logi-wh-label {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+}
+
+/* 3PL 배지 */
+.logi-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.logi-badge {
+  padding: 6px 14px;
+  border: 1px solid var(--gold);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.07);
+  letter-spacing: 0.03em;
+}
+
+/* 파이프라인 */
+.logi-pipeline {
+  margin: 36px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.logi-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.logi-step-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+}
+
+.logi-step-icon-gold {
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+  box-shadow: 0 0 16px rgba(201, 168, 76, 0.2);
+}
+
+.logi-step-body { padding-bottom: 4px; }
+
+.logi-step-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.logi-step-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.logi-pipe-line {
+  width: 2px;
+  height: 28px;
+  background: linear-gradient(180deg, var(--border), rgba(201,168,76,0.3));
+  margin-left: 23px;
+}
+
+/* 수강생 혜택 하이라이트 */
+.logi-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  background: rgba(201, 168, 76, 0.07);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: var(--radius);
+  margin-top: 4px;
+}
+
+.logi-hl-icon {
+  font-size: 20px;
+  color: var(--gold);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.logi-highlight strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--gold-light);
+}
+
+.logi-highlight p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* ─── DAILY MILLION SECTION ─── */
 #daily-million {
   padding: var(--section-pad);
@@ -1520,6 +1724,10 @@ body {
   .hero-title { font-size: clamp(28px, 7vw, 42px); }
   .hero-sub { font-size: 17px; }
   .btn-primary { padding: 16px 28px; font-size: 16px; }
+
+  /* 모바일: Logistics */
+  .logistics-inner { grid-template-columns: 1fr; gap: 40px; }
+  .logi-step-title { font-size: 15px; }
 
   /* 모바일: Daily Million */
   .dm-formula { padding: 24px 20px; gap: 12px; }
