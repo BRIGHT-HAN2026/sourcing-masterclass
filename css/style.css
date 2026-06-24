@@ -142,3 +142,106 @@ body {
 }
 
 .brands-list span:hover { opacity: 1; color: var(--gold); }
+
+/* ─── PAIN POINTS ─── */
+#pain {
+  padding: var(--section-pad);
+  background: var(--bg-secondary);
+}
+
+.pain-header { margin-bottom: 60px; }
+
+.pain-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pain-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  transition: border-color 0.2s;
+}
+
+.pain-card:hover { border-color: var(--gold); }
+
+.pain-num {
+  font-size: 44px;
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.2;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.pain-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.pain-card p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ─── INSTRUCTOR ─── */
+#instructor {
+  padding: var(--section-pad);
+}
+
+.instructor-inner {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.instructor-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.instructor-placeholder span {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.instructor-role {
+  font-size: 15px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 24px;
+  margin-top: -4px;
+}
+
+.instructor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.instructor-tags span {
+  padding: 6px 18px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
