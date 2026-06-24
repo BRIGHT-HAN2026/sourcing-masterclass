@@ -663,6 +663,229 @@ body {
   opacity: 0.4;
 }
 
+/* ─── ANNOUNCE BAR ─── */
+#announce-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--gold);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.announce-dot {
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 50%;
+  animation: pulse-dot 1.4s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.announce-text { flex: 1; text-align: center; }
+
+.announce-cta {
+  padding: 6px 16px;
+  background: #000;
+  color: var(--gold);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.announce-cta:hover { opacity: 0.8; }
+
+/* ─── HERO STATS ─── */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 48px auto 0;
+  max-width: 560px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.hero-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 20px 16px;
+}
+
+.hstat-num {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.hstat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.hstat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ─── STATS SECTION ─── */
+#stats {
+  padding: 60px 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.stat-card {
+  background: var(--bg-secondary);
+  padding: 48px 32px;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.stat-card:hover { background: #1a2030; }
+
+.stat-big {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.stat-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.stat-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ─── CURRICULUM BADGE ─── */
+.curriculum-featured {
+  border-color: var(--gold) !important;
+  background: #1a2030 !important;
+}
+
+.curr-badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px 10px;
+  background: var(--gold);
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+  vertical-align: middle;
+  letter-spacing: 0.03em;
+}
+
+/* ─── PROCESS SECTION ─── */
+#process {
+  padding: var(--section-pad);
+  background: var(--bg-secondary);
+}
+
+.process-steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  justify-content: center;
+}
+
+.process-step {
+  flex: 1;
+  max-width: 220px;
+  text-align: center;
+  padding: 36px 24px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.2s;
+}
+
+.process-step:hover { border-color: var(--gold); }
+
+.pstep-num {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.5;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.process-step h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.process-step p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.process-arrow {
+  font-size: 24px;
+  color: var(--gold);
+  opacity: 0.4;
+  padding-top: 56px;
+  flex-shrink: 0;
+}
+
+/* ─── PRICING URGENCY ─── */
+.pricing-urgency {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 20px;
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 100px;
+  font-size: 14px;
+  color: var(--gold);
+  font-weight: 600;
+}
+
 /* ─── RESPONSIVE (768px 이하) ─── */
 @media (max-width: 768px) {
   :root { --section-pad: 72px 0; }
@@ -696,4 +919,25 @@ body {
   .hero-title { font-size: clamp(28px, 7vw, 42px); }
   .hero-sub { font-size: 17px; }
   .btn-primary { padding: 16px 28px; font-size: 16px; }
+
+  /* 모바일: Announce bar */
+  #announce-bar { font-size: 12px; gap: 8px; flex-wrap: wrap; }
+  .announce-text { font-size: 12px; }
+
+  /* 모바일: Hero stats */
+  .hero-stats { max-width: 100%; }
+  .hstat-num { font-size: 20px; }
+  .hstat-label { font-size: 11px; }
+
+  /* 모바일: Stats grid */
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-card { padding: 32px 20px; }
+
+  /* 모바일: Process */
+  .process-steps { flex-direction: column; align-items: center; gap: 8px; }
+  .process-step { max-width: 100%; width: 100%; }
+  .process-arrow { transform: rotate(90deg); padding-top: 0; }
+
+  /* 모바일: Curriculum badge */
+  .curr-badge { display: none; }
 }
