@@ -455,3 +455,208 @@ body {
   font-weight: 600;
   color: var(--text-primary);
 }
+
+/* ─── PRICING ─── */
+#pricing {
+  padding: var(--section-pad);
+  background: var(--bg-secondary);
+}
+
+.price-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--bg-primary);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.price-top {
+  padding: 48px 48px 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.price-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.price-detail {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+.price-amount {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.price-includes {
+  padding: 36px 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.price-includes h4 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.price-includes ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.price-includes li { font-size: 16px; }
+
+.price-actions { padding: 36px 48px; }
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+  font-size: 18px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.bank-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bank-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.bank-num {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bank-note {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ─── FAQ ─── */
+#faq { padding: var(--section-pad); }
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.faq-q {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: none;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.faq-q:hover { background: #1e2530; }
+
+.faq-icon {
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--gold);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.25s;
+}
+
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+.faq-a {
+  display: none;
+  padding: 20px 32px 28px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+}
+
+.faq-item.open .faq-a { display: block; }
+
+.faq-a p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ─── FOOTER ─── */
+#footer {
+  padding: 60px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-brand {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 0;
+}
+
+.footer-info span {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 0 12px;
+  border-right: 1px solid var(--border);
+}
+
+.footer-info span:last-child { border-right: none; }
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--text-secondary);
+  opacity: 0.4;
+}
