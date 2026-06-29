@@ -989,6 +989,43 @@ body {
   line-height: 1;
 }
 
+.dm-monthly-highlight {
+  margin-top: 16px;
+  padding: 32px 40px;
+  background: linear-gradient(135deg, rgba(201,168,76,0.15) 0%, rgba(201,168,76,0.05) 100%);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.dm-monthly-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.dm-monthly-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.dm-monthly-num {
+  font-size: clamp(48px, 7vw, 80px);
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(201,168,76,0.3);
+}
+
+.dm-monthly-sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
 /* 3단계 */
 .dm-steps {
   display: flex;
