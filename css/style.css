@@ -16,6 +16,10 @@
 
 html { scroll-behavior: smooth; }
 
+/* 상단 sticky 공지바(약 48px)에 섹션 제목이 가리지 않도록 앵커 착지 오프셋 */
+section[id],
+footer[id] { scroll-margin-top: 64px; }
+
 body {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   word-break: keep-all;
@@ -467,6 +471,67 @@ body {
   background: var(--bg-secondary);
 }
 
+/* 2단계 플로우 */
+.price-flow {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 12px;
+}
+
+.price-flow-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 24px 20px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.price-flow-main {
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.05);
+}
+
+.pf-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.pf-badge-gold { color: var(--gold); }
+
+.pf-title { font-size: 19px; font-weight: 800; }
+
+.pf-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.pf-price {
+  margin-top: 4px;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.pf-price-lock { font-size: 17px; }
+
+.price-flow-arrow {
+  align-self: center;
+  font-size: 24px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
 .price-card {
   max-width: 640px;
   margin: 0 auto;
@@ -474,6 +539,110 @@ body {
   border: 1px solid var(--gold);
   border-radius: var(--radius);
   overflow: hidden;
+}
+
+.price-tag-line {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.price-action-note {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* 본강의 안내 카드 */
+.maincourse-card {
+  max-width: 640px;
+  margin: 24px auto 0;
+  background: var(--bg-primary);
+  border: 1px dashed var(--gold);
+  border-radius: var(--radius);
+  padding: 40px 48px;
+  text-align: center;
+}
+
+.mc-lock-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.mc-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.mc-hidden-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.mc-hidden-dots {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--text-secondary);
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+.mc-hidden-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+.mc-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.mc-firstclass {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  text-align: left;
+  padding: 24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+}
+
+.mc-fc-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.mc-fc-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.mc-fc-body p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 .price-top {
@@ -1934,6 +2103,12 @@ body {
   .price-actions { padding: 32px 28px; }
 
   .price-amount { font-size: 36px; }
+
+  .price-flow { flex-direction: column; gap: 8px; }
+  .price-flow-arrow { transform: rotate(90deg); }
+  .maincourse-card { padding: 32px 24px; }
+  .mc-hidden-dots { font-size: 30px; }
+  .mc-firstclass { flex-direction: column; gap: 12px; }
 
   .faq-q { font-size: 15px; padding: 20px 24px; }
   .faq-a { padding: 16px 24px 24px; }
